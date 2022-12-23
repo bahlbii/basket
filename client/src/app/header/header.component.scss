@@ -1,34 +1,64 @@
-$backgroundColor: red;
+$backgroundColor: #fb641b;
 $logo_text_color: blueviolet;
 $nav_items_display: inline-flex;
 $nav_items_hover_color: white;
 
-.nav{
-    background-color: $backgroundColor;
-    display: flex;
-    justify-content: space-between;
+.nav {
+  //   background-color: $backgroundColor;
+  display: flex;
+  justify-content: space-between;
 }
 .nav h1 {
-    color: $logo_text_color;
-    margin: 0;
-    font-size: 40px;
+  color: $backgroundColor;
+  margin: 0;
+  font-size: 40px;
 }
-.nav ul{
-    display: $nav_items_display;
-    list-style-type:  none;
-    margin: 0;
-    padding: 0;
+.nav ul {
+  display: $nav_items_display;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.nav li{
-    padding-top: 10px;
-    padding-left: 15px;
+.nav li {
+  padding-top: 10px;
+  padding-left: 15px;
 }
-.nav li a{
-    color: black;
-    text-decoration: none;
-    align-items: center;
+.nav li a {
+  color: $backgroundColor;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
 }
-.nav li a:hover{
-    color: $nav_items_hover_color;
+.nav li a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
 }
-
+.nav .search_bar {
+  flex: 1;
+  display: flex;
+  margin-top: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.nav .nav_items {
+    margin-top: 10px;
+  display: flex;
+  margin-left: 5%;
+}
+.nav .search_bar input {
+  flex: 1;
+  color: #fb641b;
+  border: 1px solid $backgroundColor;
+  height: 35px;
+  border-right: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.nav .search_bar button {
+  margin-top: 5px;
+  color: #fb641b;
+  font-weight: bold;
+  border: 1px solid $backgroundColor;
+  height: 39px;
+  border-left: 0px;
+}
