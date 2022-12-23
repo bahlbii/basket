@@ -2,15 +2,16 @@ $backgroundColor: #fb641b;
 $logo_text_color: blueviolet;
 $nav_items_display: inline-flex;
 $nav_items_hover_color: white;
+$navbar_margin_top: 5px;
 
 .nav {
-  //   background-color: $backgroundColor;
+  // width: 80%;
   display: flex;
   justify-content: space-between;
 }
 .nav h1 {
   color: $backgroundColor;
-  margin: 0;
+  margin: $navbar_margin_top 0 0 0;
   font-size: 40px;
 }
 .nav ul {
@@ -36,7 +37,7 @@ $nav_items_hover_color: white;
 .nav .search_bar {
   flex: 1;
   display: flex;
-  margin-top: 5px;
+  margin-top: $navbar_margin_top;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -51,11 +52,11 @@ $nav_items_hover_color: white;
   border: 1px solid $backgroundColor;
   height: 35px;
   border-right: 0px;
-  margin-top: 5px;
+  margin-top: $navbar_margin_top;
   margin-bottom: 5px;
 }
 .nav .search_bar button {
-  margin-top: 5px;
+  margin-top: $navbar_margin_top;
   color: #fb641b;
   font-weight: bold;
   border: 1px solid $backgroundColor;
