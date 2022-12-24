@@ -1,8 +1,13 @@
 <nav class="nav">
     <h1> basket</h1>
     <div class="search_bar">
-        <input type="text" placeholder="search for products" />
+        <input type="text" (keyup)="searchProducts($event)" (blur)="hideSearch()" placeholder="search for products" />
         <button class="searchbutton">Search</button>
+        <ul class="suggested-result" *ngIf="searchResult">
+            <li *ngFor="let item of searchResult">
+                <a href="">{{item.name}}</a>
+            </li>
+        </ul>
     </div>
     <div class="nav_items">
         <ul>

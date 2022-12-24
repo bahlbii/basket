@@ -7,7 +7,7 @@
     <div class="product-item">
       <img src="{{item.image}}" alt="item-image">
       <div class="product-details">
-        <h6 class="product-name">{{item.name | slice:0:50 }}</h6>
+        <h6 class="product-name">{{item.id}} - {{item.name | slice:0:50 }}</h6>
         <div class="product-price">
           <div class="product-price">
             <span class="product-currency">
@@ -16,8 +16,7 @@
             {{item.price}}
           </div>
           <div class="product-addToBasket">
-            <!-- <a routerLink="/details/{{ item.id }}">View Details</a> -->
-            <a class="add-to-basket-btn">ADD TO BASKET</a>
+            <button class="add-to-basket-btn" (click)="AddToCart()">ADD TO BASKET</button>
           </div>
         </div>
       </div>

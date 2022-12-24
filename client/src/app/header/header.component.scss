@@ -5,7 +5,6 @@ $nav_items_hover_color: white;
 $navbar_margin_top: 5px;
 
 .nav {
-  // width: 80%;
   display: flex;
   justify-content: space-between;
 }
@@ -37,12 +36,11 @@ $navbar_margin_top: 5px;
 .nav .search_bar {
   flex: 1;
   display: flex;
-  margin-top: $navbar_margin_top;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: $navbar_margin_top 5% 0 5%;
+  padding-top: 5px;
 }
 .nav .nav_items {
-    margin-top: 10px;
+  margin-top: 10px;
   display: flex;
   margin-left: 5%;
 }
@@ -62,4 +60,21 @@ $navbar_margin_top: 5px;
   border: 1px solid $backgroundColor;
   height: 35px;
   border-left: 0px;
+}
+.suggested-result {
+  position: absolute;
+  top: 50px;
+  z-index: 10;
+  display: list-item !important;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 300px;
+}
+.suggested-result li {
+  // border-bottom: 1px solid #ddd;
+  padding: 5px;
+}
+.suggested-result li a {
+  cursor: pointer;
+  color: #fb641b;
 }

@@ -11,4 +11,7 @@ export class ListingService {
 	productList(){ //toFix
 		return this.http.get<product[]>("http://localhost:3000/listing"); //toFix
 	}
+	searchProducts(query: string){
+		return this.http.get<product[]>(`http://localhost:3000/listing?q=${query}`);
+	}
 }

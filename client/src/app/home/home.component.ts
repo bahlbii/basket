@@ -19,4 +19,9 @@ export class HomeComponent implements OnInit {
 			this.productList=data;
 		});
 	}
+	AddToCart(){
+		if(!localStorage.getItem("user")){
+			console.warn(this.productList);
+		}
+	}
 }
