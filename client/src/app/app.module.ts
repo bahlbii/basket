@@ -8,22 +8,36 @@ import { HomeComponent } from "./home/home.component";
 import { CartComponent } from "./cart/cart.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { ListingDetailsComponent } from "./listing-details/listing-details.component";
+import { SearchComponent } from "./search/search.component";
+import { FooterComponent } from "./footer/footer.component";
+import { CheckoutComponent } from "./checkout/checkout.component";
+import { OrdersComponent } from "./orders/orders.component";
+import { UserComponent } from "./user/user.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		HeaderComponent,
-		HomeComponent,
-		CartComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		NgbModule,
-		FontAwesomeModule,
-		HttpClientModule,
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        HomeComponent,
+        CartComponent,
+        ListingDetailsComponent,
+        SearchComponent,
+        FooterComponent,
+        CheckoutComponent,
+        OrdersComponent,
+        UserComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        FontAwesomeModule,
+        HttpClientModule,
+        FormsModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,24 +4,24 @@ import { ListingService } from "../services/listing.service";
 import { faLiraSign } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
-	selector: "app-home",
-	templateUrl: "./home.component.html",
-	styleUrls: ["./home.component.scss"]
+    selector: "app-home",
+    templateUrl: "./home.component.html",
+    styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-	icon=faLiraSign;
-	productList: undefined | product[];
+    icon=faLiraSign;
+    productList: undefined | product[];
 	
-	constructor(private product:ListingService) { }
+    constructor(private product:ListingService) { }
 
-	ngOnInit(): void {
-		this.product.productList().subscribe((data)=>{
-			this.productList=data;
-		});
-	}
-	AddToCart(){
-		if(!localStorage.getItem("user")){
-			console.warn(this.productList);
-		}
-	}
+    ngOnInit(): void {
+        this.product.productList().subscribe((data)=>{
+            this.productList=data;
+        });
+    }
+    AddToCart(){
+        if(!localStorage.getItem("user")){
+            console.warn(this.productList);
+        }
+    }
 }

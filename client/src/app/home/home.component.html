@@ -5,18 +5,22 @@
   <div class="col-sm-3" *ngFor="let item of productList">
     <!--toFix-->
     <div class="product-item">
-      <img src="{{item.image}}" alt="item-image">
+      <img src="{{ item.image }}" alt="item-image" />
       <div class="product-details">
-        <h6 class="product-name">{{item.id}} - {{item.name | slice:0:50 }}</h6>
+        <h6 class="product-name">
+          {{ item.id }} - {{ item.name | slice : 0 : 50 }}
+        </h6>
         <div class="product-price">
           <div class="product-price">
             <span class="product-currency">
               <fa-icon [icon]="icon"></fa-icon>
             </span>
-            {{item.price}}
+            {{ item.price }}
           </div>
           <div class="product-addToBasket">
-            <button class="add-to-basket-btn" (click)="AddToCart()">ADD TO BASKET</button>
+            <button class="add-to-basket-btn" (click)="AddToCart()">
+              ADD TO BASKET
+            </button>
           </div>
         </div>
       </div>
