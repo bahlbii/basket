@@ -1,3 +1,36 @@
-<h1>
-    cart page works!
-</h1>
+<div class="cart">
+  <div class="row">
+    <div class="col-sm-8 details">
+      <ul *ngFor="let cart of cartData">
+        <li>
+          <img src="{{ cart.image }}" alt="" />
+          <div class="itemQuantity">
+            <div><fa-icon [icon]="iconMinus"></fa-icon></div>
+            <div class="quantityCounter">{{ cart.quantity }}</div>
+            <div><fa-icon [icon]="iconPlus"></fa-icon></div>
+          </div>
+        </li>
+        <li class="itemName">
+          <span> {{ cart.name }}</span>
+          <span> {{ cart.price }}</span>
+          <a class="removeItemBtn" (click)="removeToCart(cart.id)">
+            REMOVE ITEM
+          </a>
+        </li>
+      </ul>
+      <div *ngIf="cartData?.length === 0">
+        <h3>Cart is empty. Please add items.</h3>
+      </div>
+      <div>
+        <button (click)="continueShopping()" class="continueShoppingBtn max-width">
+          <fa-icon [icon]="iconArrow"></fa-icon>CONTINUE SHOPPING
+        </button>
+        <button (click)="checkout()" class="checkoutBtn max-width">
+          PLACE ORDER
+        </button>
+      </div>
+    </div>
+
+    
+  </div>
+</div>

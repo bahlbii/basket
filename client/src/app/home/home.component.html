@@ -5,7 +5,8 @@
   <div class="col-sm-3" *ngFor="let item of productList">
     <!--toFix-->
     <div class="product-item">
-      <img src="{{ item.image }}" alt="item-image" />
+      <a routerLink="/details/{{item.id}}"><img src="{{ item.image }}" alt="item-image" /></a>
+      
       <div class="product-details">
         <h6 class="product-name">
           {{ item.id }} - {{ item.name | slice : 0 : 50 }}
@@ -18,7 +19,8 @@
             {{ item.price }}
           </div>
           <div class="product-addToBasket">
-            <button class="add-to-basket-btn" (click)="AddToCart()">
+            <!-- <a routerLink="/details/{{item.id}}">View Details</a> -->
+            <button class="addToBasket" (click)="addToCart(item.id)">
               ADD TO BASKET
             </button>
           </div>

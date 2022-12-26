@@ -18,7 +18,7 @@ const routes: Routes = [
         component: SearchComponent
     },
     {
-        path: "listing/:listingId",
+        path: "details/:productId",
         component: ListingDetailsComponent
     },
     {  
@@ -30,7 +30,6 @@ const routes: Routes = [
         component: CartComponent,
     },
     {
-        
         path:"checkout",
         component: CheckoutComponent,
     },
