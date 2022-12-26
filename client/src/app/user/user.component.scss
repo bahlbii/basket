@@ -1,3 +1,4 @@
+$box_shadow_color: #f5d4c3;
 .user h1{
     margin-top: 50px;
     margin-bottom: 80px;
@@ -10,5 +11,26 @@
 }
 .user a{
     color: #fb641b;
+    cursor: pointer;
+}
+.login{
+    display: grid;
+    justify-items: center;
+}
+.login .loginForm{
+    border: 1px solid $box_shadow_color;
+    display: grid;
+    padding: 1rem;
+    box-shadow: 0 1rem 1rem 1px $box_shadow_color;
+}
+.loginBtn{
+    background-color: #fb641b;
+    border: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.15rem;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 10px;
+    width: 50%;
     cursor: pointer;
 }
