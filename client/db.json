@@ -51,18 +51,7 @@
       "id": 1
     }
   ],
-  "cart": [
-    {
-      "id": 2,
-      "name": "Deodorant",
-      "price": "26",
-      "currency": "TRY",
-      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdeodorant.jpeg?v=1561027551696",
-      "quantity": 1,
-      "productId": 2,
-      "userId": 1
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "email": "bah@gmail.com",

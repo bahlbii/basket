@@ -13,6 +13,7 @@ export class ListingService {
     constructor(private http:HttpClient) { }
     getProduct(id: string){
         return this.http.get<product>(`http://localhost:3000/listing/${id}`);
+        
     }
     //toFix
     addToCart(cartData: cart):Observable<object> {
