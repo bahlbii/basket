@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The <i>json-server</i> package was used for local database. 
 
-## 1. Starting local database
+## 1. Installing packages
 First, open terminal in cloned project root, and install all packages.
 ``` bash
 $ npm install
