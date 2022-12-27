@@ -53,16 +53,6 @@
   ],
   "cart": [
     {
-      "id": 4,
-      "name": "Pahalı Şampuan",
-      "price": "135",
-      "currency": "TRY",
-      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
-      "quantity": 1,
-      "productId": 4,
-      "userId": 1
-    },
-    {
       "id": 2,
       "name": "Deodorant",
       "price": "26",

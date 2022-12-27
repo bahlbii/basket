@@ -10,9 +10,8 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { ListingDetailsComponent } from "./listing-details/listing-details.component";
 import { SearchComponent } from "./search/search.component";
-import { FooterComponent } from "./footer/footer.component";
-import { CheckoutComponent } from "./checkout/checkout.component";
-import { OrdersComponent } from "./orders/orders.component";
+// import { FooterComponent } from "./footer/footer.component";
+// import { OrdersComponent } from "./orders/orders.component";
 import { UserComponent } from "./user/user.component";
 import { FormsModule } from "@angular/forms";
 
@@ -24,9 +23,6 @@ import { FormsModule } from "@angular/forms";
         CartComponent,
         ListingDetailsComponent,
         SearchComponent,
-        FooterComponent,
-        CheckoutComponent,
-        OrdersComponent,
         UserComponent,
     ],
     imports: [

@@ -32,10 +32,10 @@ export class UserComponent implements OnInit {
       
         });
     }
-    openSignUp(){
-        this.showLogin=false;
+    displaySignUpForm(){
+        this.showLogin = false;
     }
-    openLogin(){
+    displayLoginForm(){
         this.showLogin=true;
     }
 
@@ -47,23 +47,20 @@ export class UserComponent implements OnInit {
             const cartDataList:product[]= JSON.parse(data);
   
             cartDataList.forEach((product:product, index)=>{
-                const cartData:cart={
+                const cartData: cart={
                     ...product,
-                    productId: product.id,
-                    userId,
-                    category: "",
-                    color: "",
-                    description: "",
-                    quantity: undefined
+                    quantity: undefined,
+                    productId: 0,
+                    userId: 0
                 };
-                delete cartData.id;
+                // delete cartData.id;
                 setTimeout(() => {
-                    this.product.addToCart(cartData).subscribe((result: any)=>{
+                    this.product.addToCart(cartData).subscribe((result: unknown)=>{
                         if(result){
                             console.warn("data is stored in DB");
                         }
                     });
-                }, 500);
+                }, 100);
                 if(cartDataList.length===index+1){
                     localStorage.removeItem("localCart");
                 }
@@ -72,7 +69,7 @@ export class UserComponent implements OnInit {
 
         setTimeout(() => {
             this.product.getCartList(userId);
-        }, 2000);
+        }, 200);
     
     }
 
