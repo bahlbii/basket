@@ -1,12 +1,13 @@
 $border_color: #9a9d9a;
 $remove_item_button: #adaaaa;
 $box_shadow_color: #f5d4c3;
+$default_margin_top: 40px;
+
 .cart{
     margin-top: 40px;
     margin-bottom: 50px;
     justify-content: center;  
     align-items: center;
-    background-color: blue($color: #000000);
 }
 .cart-header{
     border-bottom: 1.5px solid $border_color;
@@ -41,12 +42,12 @@ $box_shadow_color: #f5d4c3;
     padding: 15px 15px 0 15px;
     border-bottom: 1px solid $border_color;
 }
-.details ul li .itemQuantity{
+.itemQuantity{
     display: flex;
     margin: 10%;
     justify-content: space-between;
 }
-.details ul li .itemQuantity .quantityCounter{
+.quantityCounter{
     border:  1px solid #9ea09e;
     width: 40%;
     text-align: center;
@@ -62,7 +63,7 @@ $box_shadow_color: #f5d4c3;
     color: rgb(59, 60, 59);
     width: fit-content;
     margin-left: 200px;
-    margin-top: 20px;
+    margin-top: $default_margin_top;
     font-weight:  500;
     text-decoration: none;
     cursor: pointer;
@@ -73,18 +74,17 @@ $box_shadow_color: #f5d4c3;
 }
 
 .continueShoppingBtn, 
-.checkoutBtn {
+.placeOrderBtn {
     width: 28%;
     margin: 10px 20px 5px 0;
     padding: 5px 10px 10px 5px;
     border: none;
     color: #fff;
-    // box-shadow: 2px;
 }
 .continueShoppingBtn {
     color: #000;
     margin-left: 1rem;
 }
-.checkoutBtn {
+.placeOrderBtn {
     background-color: #fb641b;
 }
