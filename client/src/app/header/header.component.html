@@ -38,7 +38,6 @@
     </ul>
     <ul *ngSwitchCase="'user'">
       <li><a routerLink="">HOME</a></li>
-      <li><a routerLink="orders">ORDERS</a></li>
       <li *ngIf="cartItems === 0">
         <a [routerLink]="'cart'"> CART </a>
       </li>

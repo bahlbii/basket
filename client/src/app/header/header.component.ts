@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { product } from "../listingData";
 import { ListingService } from "../services/listing.service";
 
@@ -9,26 +10,28 @@ import { ListingService } from "../services/listing.service";
     styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
-
-    menuType = "default";
-    userName="";
-    cartItems=0;
+    icon = faBars;
+    isLoggedIn = "default";
+    userName = "";
+    cartItems = 0;
+    cartData:product|undefined;
     searchResult: undefined | product[];
 
     constructor(private route: Router, private product: ListingService) {}
 
     ngOnInit(): void {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         this.route.events.subscribe((val: any) => {
             if (val.url) {
                 if(localStorage.getItem("user")){
                     const userStore = localStorage.getItem("user");
-                    const userData = userStore && JSON.parse(userStore);
-                    this.userName= userData.name;
-                    this.menuType="user";
-                    this.product.getCartList(userData.id);
+                    const userInfo = userStore && JSON.parse(userStore);
+                    // this.userName = "Signed in: "+userInfo.name;
+                    this.isLoggedIn= "user";
+                    this.product.getCartList(userInfo.id);
                 }
                 else {
-                    this.menuType = "default";
+                    this.isLoggedIn = "default";
                 }
             }
         });
@@ -41,22 +44,27 @@ export class HeaderComponent implements OnInit {
         });
     }
 
-    userLogout(){
+    signOut(){
         localStorage.removeItem("user");
         this.route.navigate(["/user"]);
+        this.userName = "";
         this.product.cartData.emit([]);
     }
       
-    searchProducts(query: KeyboardEvent) {
+    findProduct(query: KeyboardEvent) {
         if (query) {
             const element = query.target as HTMLInputElement;
-            this.product.searchProducts(element.value).subscribe((result) => {
+            this.product.findProduct(element.value).subscribe((result) => {
                 if (result.length > 2) {
                     result.length = 2;
                 }
                 this.searchResult = result;
             });
         }
+    }
+    showMobileMenu(){
+        console.warn("mobile menu visible");
+        
     }
 
     submitSearch(val: string){
