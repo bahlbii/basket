@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
 
     addToCart(itemId: number){
         
-        this.product.getProduct(itemId.toString()).subscribe(async (data) => {
+        this.product.getProduct(itemId.toString()).subscribe((data) => {
             this.productData = data;
         });
 
@@ -44,9 +44,9 @@ export class HomeComponent implements OnInit {
             else {
                 const user = localStorage.getItem("user");
                 const userId= user && JSON.parse(user).id;
-                const cartData:cart={
+                const cartData: cart = {
                     ...this.productData,
-                    productId:this.productData.id,
+                    productId: this.productData.id,
                     userId
                 };
                 

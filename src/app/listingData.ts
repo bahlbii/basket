@@ -29,9 +29,8 @@ export interface order {
   email:string,
   address:string,
   contact:string,
-  // totalPrice:number,
-  userId:string,
-  id:number|undefined
+  user_id: string,
+  order_id: number,
 }
 export interface signUp {
   name: string;

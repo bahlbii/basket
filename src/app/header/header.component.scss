@@ -107,7 +107,8 @@ $navbar_margin_top: 5px;
   }
   .nav {
     width: 100%;
-    // display: grid;
+
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
@@ -132,9 +133,9 @@ $navbar_margin_top: 5px;
     width: 100%;
     color: $backgroundColor;
   }
-  .menu {
-    display: none;
-  }
+  // .menu {
+  //   display: none;
+  // }
   .nav .search_bar {
     flex: 1;
     display: none; //flex;
@@ -166,9 +167,12 @@ $navbar_margin_top: 5px;
 
   .nav .nav_items {
     margin-top: 10px;
-    display: flex;
+    flex-direction: column;
     margin-left: 5%;
   }
+  .nav_items--right{
+    margin-left: 0;
+    }
   .nav .search_bar input {
     flex: 1;
     color: #fb641b;

@@ -53,34 +53,134 @@
   ],
   "cart": [
     {
-      "id": 2,
-      "name": "Deodorant",
-      "price": "26",
+      "id": 3,
+      "name": "Diş Fırçası",
+      "price": "19.95",
       "currency": "TRY",
-      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdeodorant.jpeg?v=1561027551696",
+      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdis-fircasi.jpeg?v=1561027551798",
       "quantity": 1,
-      "productId": 2,
-      "userId": 1
-    },
-    {
-      "id": 4,
-      "name": "Pahalı Şampuan",
-      "price": "135",
-      "currency": "TRY",
-      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
-      "quantity": 4,
-      "productId": 4,
+      "productId": 3,
       "userId": 1
     }
   ],
   "orders": [
     {
-      "email": "bah@gmail.com",
-      "address": "Buca Izmir",
-      "contact": "010101",
-      "totalPrice": 104750,
-      "userId": 1,
+      "0": {
+        "id": 1,
+        "name": "Chevron Tempered Glass Guard for Lenovo K6 Power Chevron Tempered Glass Guard for Lenovo K6 Power",
+        "price": "13",
+        "currency": "TRY",
+        "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
+        "quantity": 1,
+        "productId": 1,
+        "userId": 1
+      },
+      "user_id": 1,
       "id": 1
+    },
+    {
+      "0": {
+        "id": 1,
+        "name": "Chevron Tempered Glass Guard for Lenovo K6 Power Chevron Tempered Glass Guard for Lenovo K6 Power",
+        "price": "13",
+        "currency": "TRY",
+        "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
+        "quantity": 1,
+        "productId": 1,
+        "userId": 1
+      },
+      "user_id": 1,
+      "id": 2
+    },
+    {
+      "0": {
+        "id": 1,
+        "name": "Chevron Tempered Glass Guard for Lenovo K6 Power Chevron Tempered Glass Guard for Lenovo K6 Power",
+        "price": "13",
+        "currency": "TRY",
+        "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
+        "quantity": 1,
+        "productId": 1,
+        "userId": 1
+      },
+      "user_id": 1,
+      "id": 3
+    },
+    {
+      "0": {
+        "id": 3,
+        "name": "Diş Fırçası",
+        "price": "19.95",
+        "currency": "TRY",
+        "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdis-fircasi.jpeg?v=1561027551798",
+        "quantity": 1,
+        "productId": 3,
+        "userId": 1
+      },
+      "user_id": 1,
+      "id": 4
+    },
+    {
+      "0": {
+        "id": 3,
+        "name": "Diş Fırçası",
+        "price": "19.95",
+        "currency": "TRY",
+        "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdis-fircasi.jpeg?v=1561027551798",
+        "quantity": 1,
+        "productId": 3,
+        "userId": 1
+      },
+      "1": {
+        "id": 1,
+        "name": "Chevron Tempered Glass Guard for Lenovo K6 Power Chevron Tempered Glass Guard for Lenovo K6 Power",
+        "price": "13",
+        "currency": "TRY",
+        "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
+        "quantity": 1,
+        "productId": 1,
+        "userId": 1
+      },
+      "user_id": 1,
+      "id": 5
+    },
+    {
+      "0": {
+        "id": 3,
+        "name": "Diş Fırçası",
+        "price": "19.95",
+        "currency": "TRY",
+        "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdis-fircasi.jpeg?v=1561027551798",
+        "quantity": 1,
+        "productId": 3,
+        "userId": 1
+      },
+      "1": {
+        "id": 1,
+        "name": "Chevron Tempered Glass Guard for Lenovo K6 Power Chevron Tempered Glass Guard for Lenovo K6 Power",
+        "price": "13",
+        "currency": "TRY",
+        "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
+        "quantity": 1,
+        "productId": 1,
+        "userId": 1
+      },
+      "user_id": 1,
+      "id": 6
+    },
+    {
+      "0": {
+        "id": 3,
+        "name": "Diş Fırçası",
+        "price": "19.95",
+        "currency": "TRY",
+        "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdis-fircasi.jpeg?v=1561027551798",
+        "quantity": 1,
+        "productId": 3,
+        "userId": 1
+      },
+      "user_id": 1,
+      "id": 7
     }
   ]
 }

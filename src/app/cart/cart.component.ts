@@ -16,6 +16,8 @@ export class CartComponent implements OnInit {
     iconMinus = faMinusCircle;
     cartData: cart[] | undefined;
 
+    confirmationMessage: string | undefined;
+
     constructor(private product: ListingService, private router: Router) { }
 
     ngOnInit(): void {
@@ -37,7 +39,7 @@ export class CartComponent implements OnInit {
             this.cartData = result;
         });
     }
-    decItemQuantity(itemId: any) { //toFix
+    decQuantity(itemId: any) { //toFix
 
         this.product.currentCart().subscribe((result) => {
             this.cartData = result; //this is all of the cart
@@ -50,21 +52,40 @@ export class CartComponent implements OnInit {
             console.warn(this.cartData[itemToUpdate]);
         });
     }
-    incItemQuantity() {
+    incQuantity() {
         console.warn("q increased");
     }
-    submitOrder() {
+    submitOrder(data: any) {
+        const user = localStorage.getItem("user");
+        const user_id = user && JSON.parse(user).id;
+        if (user) {
+            const orderData: order = {
+                ...data,
+                user_id,
+                order_id: undefined
+            };
 
-        if (this.cartData) {
+            // call delete function
             this.cartData?.forEach((item) => {
-                setTimeout(async () => {
-                    item.id && this.product.emptyFullCart(item.id);
+                setTimeout(() => {
+                    item.id && this.product.removeItemFromCart(item.id);
                 }, 700);
             });
-            console.warn("cart emptied");
-        }
 
-        this.router.navigate(["/"]);
+            //send confirmation to user about order success
+            this.product.submitOrder(orderData).subscribe((result) => {
+                if (result) {
+                    this.confirmationMessage = "Order success";
+
+                    console.warn(this.confirmationMessage);
+                    setTimeout(() => {
+                        this.confirmationMessage = undefined;
+                        this.router.navigate(["/cart"]);
+                    }, 4000);
+                }
+            });
+            console.warn(this.cartData);
+        }
     }
     continueShopping() {
         this.router.navigate(["/"]);
