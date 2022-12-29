@@ -6,21 +6,23 @@
         <li>
           <img src="{{ cart.image }}" alt="item-image" />
           <div class="itemQuantity">
-            <div (click)="decItemQuantity(cart.productId)">
+            <div (click)="decItemQuantity(cart.productId)" class="minus">
               <fa-icon [icon]="iconMinus"></fa-icon>
             </div>
             <div class="quantityCounter">{{ cart.quantity }}</div>
-            <div (click)="incItemQuantity()">
+            <div (click)="incItemQuantity()" class="plus">
               <fa-icon [icon]="iconPlus"></fa-icon>
             </div>
           </div>
         </li>
-        <li class="itemName">
-          <span> {{ cart.name }}</span>
-          <span> {{ cart.price }}</span>
-          <a class="removeItemBtn" (click)="removeItem(cart.id)">
-            REMOVE
-          </a>
+        <li class="item">
+          <div class="item-name"> {{ cart.name }}</div>
+          <div class="item-price"> {{ cart.price }}</div>
+          <div class="item-remove">
+            <a class="removeItemBtn" (click)="removeItem(cart.id)">
+              REMOVE
+            </a>
+          </div>
         </li>
       </ul>
       <div *ngIf="cartData?.length === 0">
@@ -31,7 +33,7 @@
           (click)="continueShopping()"
           class="continueShoppingBtn max-width"
         >
-          <!-- <fa-icon [icon]="iconArrow"></fa-icon> -->
+          <fa-icon [icon]="iconArrow"></fa-icon>
           CONTINUE SHOPPING
         </button>
         <button (click)="submitOrder()" class="placeOrderBtn">

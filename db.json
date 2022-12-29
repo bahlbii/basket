@@ -51,7 +51,38 @@
       "id": 1
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": 2,
+      "name": "Deodorant",
+      "price": "26",
+      "currency": "TRY",
+      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdeodorant.jpeg?v=1561027551696",
+      "quantity": 1,
+      "productId": 2,
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "name": "Diş Fırçası",
+      "price": "19.95",
+      "currency": "TRY",
+      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdis-fircasi.jpeg?v=1561027551798",
+      "quantity": 4,
+      "productId": 3,
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "name": "Pahalı Şampuan",
+      "price": "135",
+      "currency": "TRY",
+      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
+      "quantity": 12,
+      "productId": 4,
+      "userId": 1
+    }
+  ],
   "orders": [
     {
       "email": "bah@gmail.com",

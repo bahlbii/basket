@@ -20,17 +20,7 @@ export class CartComponent implements OnInit {
 
     ngOnInit(): void {
         this.product.currentCart().subscribe((result) => {
-
-            // let price = 0;
             this.cartData = result;
-            // result.forEach((item) => {
-            //     if (item.quantity) {
-            //         price = price + (+item.price * +item.quantity);
-            //     }
-            // });
-            // this.totalPrice = price + (price / 10) + 100 - (price / 10);
-
-            // console.warn(this.totalPrice);
 
         });
     }
@@ -64,7 +54,7 @@ export class CartComponent implements OnInit {
         console.warn("q increased");
     }
     submitOrder() {
-       
+
         if (this.cartData) {
             this.cartData?.forEach((item) => {
                 setTimeout(async () => {
