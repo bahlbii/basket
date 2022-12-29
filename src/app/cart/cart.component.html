@@ -1,7 +1,7 @@
 <div class="cart">
   <div class="row">
     <div class="col-sm-8 details">
-      <div class="cart-header"><p class="cart-title">CART</p></div>
+      <div class="cart-header"><p class="cart-title">MY CART</p></div>
       <ul *ngFor="let cart of cartData">
         <li>
           <img src="{{ cart.image }}" alt="item-image" />
@@ -16,28 +16,25 @@
           </div>
         </li>
         <li class="item">
-          <div class="item-name"> {{ cart.name }}</div>
-          <div class="item-price"> {{ cart.price }}</div>
+          <div class="item-name">{{ cart.name }}</div>
+          <div class="item-price">{{ cart.price }}</div>
           <div class="item-remove">
-            <a class="removeItemBtn" (click)="removeItem(cart.id)">
-              REMOVE
-            </a>
+            <a class="removeItemBtn" (click)="removeItem(cart.id)"> REMOVE </a>
           </div>
         </li>
       </ul>
       <div *ngIf="cartData?.length === 0">
         <h3>Cart is empty. Please add items.</h3>
       </div>
-      <div >
-        <button
-          (click)="continueShopping()"
-          class="continueShoppingBtn max-width"
-        >
-          <fa-icon [icon]="iconArrow"></fa-icon>
-          CONTINUE SHOPPING
+      <div class="actionButtons">
+        <button (click)="continueShopping()" class="continueShoppingBtn">
+          <p class="continueShoppingText">
+            <fa-icon [icon]="iconArrow" class="icon"></fa-icon> CONTINUE
+            SHOPPING
+          </p>
         </button>
         <button (click)="submitOrder()" class="placeOrderBtn">
-          PLACE ORDER
+          <p class="continueShoppingText">PLACE ORDER</p>
         </button>
       </div>
     </div>
