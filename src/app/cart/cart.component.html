@@ -4,7 +4,7 @@
       <div class="cart-header"><p class="cart-title">MY CART</p></div>
       <ul *ngFor="let cart of cartData">
         <li>
-          <img src="{{ cart.image }}" alt="item-image" />
+          <div class="item-image"><img src="{{ cart.image }}" alt="item-image" /></div>
           <div class="itemQuantity">
             <div (click)="decItemQuantity(cart.productId)" class="minus">
               <fa-icon [icon]="iconMinus"></fa-icon>

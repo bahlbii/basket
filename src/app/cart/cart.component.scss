@@ -54,27 +54,29 @@ $default_margin_top: 40px;
   padding-bottom: 1%;
 }
 .item {
+  width: 100%;
   color: black;
   padding: 0 2rem;
   display: inline-grid;
 }
 
-.item a {
-  //   color: rgb(59, 60, 59);
-  //   width: fit-content;
-  //   margin-left: 200px;
-  //   margin-top: $default_margin_top;
-  //   font-weight: 500;
-  //   text-decoration: none;
-  //   cursor: pointer;
+.item .item-remove {
+  //button div
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.item .removeItemBtn {
+.item .item-remove a {
+  // background-color: green;
+  text-decoration: none;
   color: $remove_item_button;
   font-size: 15px;
 }
 
 .actionButtons {
   display: flex;
+  justify-content: center;
 }
 .continueShoppingText {
   // color: blue;
@@ -87,7 +89,7 @@ $default_margin_top: 40px;
 .placeOrderBtn {
   width: fit-content;
   margin: 10px;
-  padding: 10px 15px 0 15px;
+  padding: 10px 25px 0 25px;
   place-content: center;
   border: none;
   color: #fff;
@@ -129,25 +131,21 @@ $default_margin_top: 40px;
     place-items: center;
   }
   .details {
-    // background-color: red;
     margin: 0;
     width: 100%;
-    // box-sizing: border-box;
   }
   .details ul {
     padding: 1vw;
     margin: 0;
     list-style-type: none;
     display: flex;
-    // padding: 15px 15px 0 15px;
     border-bottom: 1px solid $border_color;
   }
   .details li {
     padding: 0.5vw;
   }
-  .details img {
-    // padding: 1px;
-    // height: 15vh;
+  .details .item-image {
+    background-size: cover;
   }
   .details .minus {
     padding: 0 1vw;
