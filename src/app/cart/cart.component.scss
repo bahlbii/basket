@@ -164,12 +164,12 @@ $default_margin_top: 40px;
     padding: 0 2rem;
     display: inline-grid;
   }
-  .item .item-name {
+  .item .item-name,
+  .item .item-price {
     font-weight: 500;
+    padding-left: 10px;
   }
   .item .item-remove {
-    //button div
-
     display: flex;
     align-items: center;
     justify-content: center;
