@@ -53,26 +53,6 @@
   ],
   "cart": [
     {
-      "id": 6,
-      "name": "Elit Diş Fırçası",
-      "price": "190.95",
-      "currency": "TRY",
-      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdis-fircasi.jpeg?v=1561027551798",
-      "quantity": 1,
-      "productId": 6,
-      "userId": 1
-    },
-    {
-      "id": 1,
-      "name": "Chevron Tempered Glass Guard for Lenovo K6 Power Chevron Tempered Glass Guard for Lenovo K6 Power",
-      "price": "13",
-      "currency": "TRY",
-      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
-      "quantity": 1,
-      "productId": 1,
-      "userId": 1
-    },
-    {
       "id": 2,
       "name": "Deodorant",
       "price": "26",
@@ -80,6 +60,16 @@
       "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fdeodorant.jpeg?v=1561027551696",
       "quantity": 1,
       "productId": 2,
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "name": "Pahalı Şampuan",
+      "price": "135",
+      "currency": "TRY",
+      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
+      "quantity": 4,
+      "productId": 4,
       "userId": 1
     }
   ],

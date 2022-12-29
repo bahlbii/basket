@@ -2,7 +2,7 @@
   <h1>Products</h1>
 </div>
 <div class="row">
-  <div class="col-sm-3" *ngFor="let item of productList">
+  <div class="col-sm-3 product-card" *ngFor="let item of productList">
     <!--toFix-->
     <div class="product-item">
       <a routerLink="/details/{{item.id}}"><img src="{{ item.image }}" alt="item-image" /></a>

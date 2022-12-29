@@ -99,7 +99,7 @@ $default_margin_top: 40px;
 }
 
 // mobile cart
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 412px) {
   .cart {
     width: 100%;
     margin-top: 40px;
@@ -186,7 +186,7 @@ $default_margin_top: 40px;
   }
   .continueShoppingText {
     // color: blue;
-    font-size: 20px;
+    font-size: 15px;
   }
   .icon {
     color: #9a9d9a;
