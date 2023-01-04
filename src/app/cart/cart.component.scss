@@ -34,6 +34,9 @@ $default_margin_top: 40px;
 .details img {
   height: 100px;
 }
+.cart-empty-msg {
+  padding: 4vw;
+}
 .details ul {
   padding: 0;
   margin: 0;
@@ -125,6 +128,9 @@ $default_margin_top: 40px;
     display: grid;
     place-items: center;
   }
+  .cart-empty-msg {
+    padding: 4vw;
+}
   .details {
     margin: 0;
     width: 100%;

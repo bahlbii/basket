@@ -1,13 +1,13 @@
-<div class="tool-bar">
-  <h6 class="username">
-    <a> <span></span> {{ userName | titlecase }}</a>
-  </h6>
-</div>
 <nav class="nav">
   <h1><a routerLink="" class="logo"> basket</a></h1>
   <div class="hamburger">
-    <fa-icon (click)="showMobileMenu()" class="hamburgerIcon" [icon]="icon"></fa-icon>
+    <fa-icon
+      (click)="showMobileMenu()"
+      class="hamburgerIcon"
+      [icon]="iconBars"
+    ></fa-icon>
   </div>
+
   <div class="search_bar">
     <input
       type="text"
@@ -48,3 +48,77 @@
     </ul>
   </div>
 </nav>
+
+<!-- mobile menu  -->
+
+<div
+  class="mobile-menu"
+  *ngIf="isMenuOpened"
+  (scroll)="onscroll()"
+  [ngClass]="navbarfixed ? 'fixed' : 'nonfixed'"
+>
+  <ul>
+    <li>
+      <a routerLink="">
+        <fa-icon
+          (click)="showMobileMenu()"
+          class="cartIcon"
+          [icon]="iconHome"
+        ></fa-icon
+        >HOME</a
+      >
+    </li>
+    <li *ngIf="cartItems === 0">
+      <a [routerLink]="'cart'">
+        <fa-icon
+          (click)="showMobileMenu()"
+          class="hamburgerIcon"
+          [icon]="iconCart"
+        ></fa-icon
+        >CART
+      </a>
+    </li>
+    <li *ngIf="cartItems !== 0">
+      <a [routerLink]="'cart'">
+        <fa-icon
+          (click)="showMobileMenu()"
+          class="cartIcon"
+          [icon]="iconCart"
+        ></fa-icon
+        >CART({{ cartItems }})
+      </a>
+    </li>
+    <li>
+      <a (click)="signOut()"
+        ><fa-icon
+          (click)="showMobileMenu()"
+          class="cartIcon"
+          [icon]="iconLogout"
+        ></fa-icon
+        >LOG OUT</a
+      >
+    </li>
+  </ul>
+
+  <!-- mobile search bar -->
+  <div class="search_bar">
+    <input
+      type="text"
+      (keyup)="findProduct($event)"
+      (blur)="hideSearch()"
+      placeholder="Eg. Deodorant"
+    />
+    <button
+      #searchInput
+      class="searchbutton"
+      (click)="submitSearch(searchInput.value)"
+    >
+      Search
+    </button>
+    <ul class="suggested-result" *ngIf="searchResult">
+      <li *ngFor="let item of searchResult">
+        <a routerLink="/listing/{{ item.id }}">{{ item.name }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

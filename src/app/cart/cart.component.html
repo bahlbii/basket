@@ -23,7 +23,7 @@
           </div>
         </li>
       </ul>
-      <div *ngIf="cartData?.length === 0">
+      <div *ngIf="cartData?.length === 0" class="cart-empty-msg">
         <h3>Cart is empty. Please add items. {{confirmationMessage}}</h3>
       </div>
       <div class="actionButtons">
