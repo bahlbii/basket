@@ -51,18 +51,7 @@
       "id": 1
     }
   ],
-  "cart": [
-    {
-      "id": 1,
-      "name": "Chevron Tempered Glass Guard for Lenovo K6 Power Chevron Tempered Glass Guard for Lenovo K6 Power",
-      "price": "13",
-      "currency": "TRY",
-      "image": "https://cdn.glitch.com/a28552e7-44e1-4bbd-b298-5745e70c2209%2Fsampuan.jpeg?v=1561027551321",
-      "quantity": 1,
-      "productId": 1,
-      "userId": 1
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "0": {
